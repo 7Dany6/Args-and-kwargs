@@ -30,7 +30,7 @@ say_bye(**humans)
 # See you on Friday
 """
 #TASK1
-"""
+'''
 Joe defined a dictionary listing his favorite artists, their albums, and the song from each of the albums. It looks as follows:
 
 tracks = {"Woodkid": {"The Golden Age": "Run Boy Run",
@@ -45,7 +45,31 @@ tracklist(Woodkid={"The Golden Age": "Run Boy Run",
                    "On the Other Side": "Samara"},
           Cure={"Disintegration": "Lovesong",
                 "Wish": "Friday I'm in love"})
+'''
+#SOLUTION
 """
+def tracklist(**kwargs):
+    for name, albums in kwargs.items():
+        print(name)
+        for album, song in albums.items():
+            print(f"ALBUM: {album} TRACK: {song}")
+"""
+
+#TASK2
+'''
+Ronald is filling up his dataset with new data to classify species of Iris flowers better. 
+Define a function add_iris() to help him a bit.
+The parameters for each new sample include 4 obligatory parameters:
+
+id_n
+species
+petal_length
+petal_width
+
+There may also be some additional features. Collect keyword arguments to get them.
+Your function should add key-value pairs into an existing dictionary called iris. 
+Predictably, id_n will serve as a key, and its value should be a dictionary with the rest of the specified parameters.
+'''
 #SOLUTION
 """
 
