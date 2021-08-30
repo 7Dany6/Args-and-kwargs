@@ -79,3 +79,16 @@ def add_iris(id_n, species, petal_length, petal_width, **kwargs):
     iris[id_n] = {'species': species, 'petal_length': petal_length, 'petal_width': petal_width}
     iris[id_n].update(kwargs)
 """
+#TASK3
+'''
+Given a person's name as a keyword argument and their height as its value, declare a function tallest_people(). 
+It should print the names of the tallest people along with their heights.
+If there are several names, sort them alphabetically. 
+Also, pay attention to the output format: Name : height.
+'''
+#SOLUTION
+"""
+def tallest_people(**kwargs):
+    answer = {key: value for key, value in sorted(kwargs.items(), key=lambda x: x[0]) if value == max(kwargs.values())}
+    print(*(f'{key} : {value}' for key, value in answer.items()), sep='\n')
+"""
